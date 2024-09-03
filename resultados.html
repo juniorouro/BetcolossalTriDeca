@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="resultados.css">
+</head>
+<body>
+    <h2>Resultados</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Jogo</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody id="resultado">
+        </tbody>
+    </table>
+
+    <script>
+        // Pega os dados armazenados
+        var resultado26 = localStorage.getItem("resultado26");
+        var resultado27 = localStorage.getItem("resultado27");
+        var resultado28 = localStorage.getItem("resultado28");
+        var resultado29 = localStorage.getItem("resultado29");
+        var resultado30 = localStorage.getItem("resultado30");
+        var resultado31 = localStorage.getItem("resultado31");
+        var resultado32 = localStorage.getItem("resultado32");
+        var resultado33 = localStorage.getItem("resultado33");
+        var resultado34 = localStorage.getItem("resultado34");
+        var resultado35 = localStorage.getItem("resultado35");
+        var resultado36 = localStorage.getItem("resultado36");
+        var resultado37 = localStorage.getItem("resultado37");
+        var resultado38 = localStorage.getItem("resultado38");
+
+        // Constrói as linhas da tabela com os resultados
+        var todosResultados = 
+            "<tr><td>Palmeiras x Criciuma</td><td>" + resultado26 + "</td></tr>" +
+            "<tr><td>Vascudo x Palmeiras</td><td>" + resultado27 + "</td></tr>" +
+            "<tr><td>Palmeiras x Galo</td><td>" + resultado28 + "</td></tr>" +
+            "<tr><td>Bragabull x Palmeiras</td><td>" + resultado29 + "</td></tr>" +
+            "<tr><td>Juve x Palmeiras</td><td>" + resultado30 + "</td></tr>" +
+            "<tr><td>Palmeiras x Laion</td><td>" + resultado31 + "</td></tr>" +
+            "<tr><td>Gambás x Palmeiras</td><td>" + resultado32 + "</td></tr>" +
+            "<tr><td>Palmeiras x Gaymio</td><td>" + resultado33 + "</td></tr>" +
+            "<tr><td>Bahia x Palmeiras</td><td>" + resultado34 + "</td></tr>" +
+            "<tr><td>Atlético GO x Palmeiras</td><td>" + resultado35 + "</td></tr>" +
+            "<tr><td>Palmeiras x Botafofo</td><td>" + resultado36 + "</td></tr>" +
+            "<tr><td>Marias x Palmeiras</td><td>" + resultado37 + "</td></tr>" +
+            "<tr><td>Palmeiras x Flor</td><td>" + resultado38 + "</td></tr>";
+
+        // Exibe todos os resultados na tabela
+        document.getElementById("resultado").innerHTML = todosResultados;
+    </script>
+    
+    <button onclick="window.print()">Print</button>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confrontos do Colossal TriDeca</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1>Confrontos do Colossal TriDeca</h1>
+
+    <form id="resultadosForm">
+        <table>
+            <tr>
+                <th>Rodada</th>
+                <th>Confronto</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td>26ª</td>
+                <td><label for="resultado26">Palmeiras x Criciuma</label></td>
+                <td><input type="text" id="resultado26" name="resultado26" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>27ª</td>
+                <td><label for="resultado27">Vascudo x Palmeiras</label></td>
+                <td><input type="text" id="resultado27" name="resultado27" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>28ª</td>
+                <td><label for="resultado28">Palmeiras x Galo</label></td>
+                <td><input type="text" id="resultado28" name="resultado28" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>29ª</td>
+                <td><label for="resultado29">Bragabull x Palmeiras</label></td>
+                <td><input type="text" id="resultado29" name="resultado29" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>30ª</td>
+                <td><label for="resultado31">Juve x Palmeiras</label></td>
+                <td><input type="text" id="resultado30" name="resultado30" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>31ª</td>
+                <td><label for="resultado31">Palmeiras x Laion</label></td>
+                <td><input type="text" id="resultado31" name="resultado31" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>32ª</td>
+                <td><label for="resultado32">Gambás x Palmeiras</label></td>
+                <td><input type="text" id="resultado32" name="resultado32" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>33ª</td>
+                <td><label for="resultado33">Palmeiras x Gaymio</label></td>
+                <td><input type="text" id="resultado33" name="resultado33" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>34ª</td>
+                <td><label for="resultado34">Bahia x Palmeiras</label></td>
+                <td><input type="text" id="resultado34" name="resultado34" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>35ª</td>
+                <td><label for="resultado35">Atlético GO x Palmeiras</label></td>
+                <td><input type="text" id="resultado35" name="resultado35" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>36ª</td>
+                <td><label for="resultado36">Palmeiras x Botafofo</label></td>
+                <td><input type="text" id="resultado36" name="resultado36" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>37ª</td>
+                <td><label for="resultado37">Marias x Palmeiras</label></td>
+                <td><input type="text" id="resultado37" name="resultado37" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+            <tr>
+                <td>38ª</td>
+                <td><label for="resultado38">Palmeiras x Flor</label></td>
+                <td><input type="text" id="resultado38" name="resultado38" placeholder="0x0" pattern="\d+x\d+" required></td>
+            </tr>
+        </table>
+
+        <button type="submit">Registrar</button>
+        </form>
+
+        <script>
+            // pega o envio do form
+            document.getElementById("resultadosForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+    
+                // pega os valores digitados e joga nas variaveis
+                var resultado26 = document.getElementById("resultado26").value;
+                var resultado27 = document.getElementById("resultado27").value;
+                var resultado28 = document.getElementById("resultado28").value;
+                var resultado29 = document.getElementById("resultado29").value;
+                var resultado30 = document.getElementById("resultado30").value;
+                var resultado31 = document.getElementById("resultado31").value;
+                var resultado32 = document.getElementById("resultado32").value;
+                var resultado33 = document.getElementById("resultado33").value;
+                var resultado34 = document.getElementById("resultado34").value;
+                var resultado35 = document.getElementById("resultado35").value;
+                var resultado36 = document.getElementById("resultado36").value;
+                var resultado37 = document.getElementById("resultado37").value;
+                var resultado38 = document.getElementById("resultado38").value;
+    
+                // joga as variaveis no armazenamento local
+                localStorage.setItem("resultado26", resultado26);
+                localStorage.setItem("resultado27", resultado27);
+                localStorage.setItem("resultado28", resultado28);
+                localStorage.setItem("resultado29", resultado29);
+                localStorage.setItem("resultado30", resultado30);
+                localStorage.setItem("resultado31", resultado31);
+                localStorage.setItem("resultado32", resultado32);
+                localStorage.setItem("resultado33", resultado33);
+                localStorage.setItem("resultado34", resultado34);
+                localStorage.setItem("resultado35", resultado35);
+                localStorage.setItem("resultado36", resultado36);
+                localStorage.setItem("resultado37", resultado37);
+                localStorage.setItem("resultado38", resultado38);
+
+    
+                // redireciona para a pagina de resultados
+                window.location.href = "resultados.html";
+            });
+        </script>
+
+</body>
+</html>
